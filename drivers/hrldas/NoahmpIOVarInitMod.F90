@@ -205,6 +205,9 @@ contains
     if ( .not. allocated (NoahmpIO%T2MBXY)     ) allocate ( NoahmpIO%T2MBXY      (XSTART:XEND,YSTART:YEND) ) ! 2m temperature of bare ground part
     if ( .not. allocated (NoahmpIO%Q2MVXY)     ) allocate ( NoahmpIO%Q2MVXY      (XSTART:XEND,YSTART:YEND) ) ! 2m mixing ratio of vegetation part
     if ( .not. allocated (NoahmpIO%Q2MBXY)     ) allocate ( NoahmpIO%Q2MBXY      (XSTART:XEND,YSTART:YEND) ) ! 2m mixing ratio of bare ground part
+    if ( .not. allocated (NoahmpIO%T2M)        ) allocate ( NoahmpIO%T2M         (XSTART:XEND,YSTART:YEND) ) ! grid-average 2m air temperature
+    if ( .not. allocated (NoahmpIO%Q2M)        ) allocate ( NoahmpIO%Q2M         (XSTART:XEND,YSTART:YEND) ) ! grid-average 2m specific humidity
+    if ( .not. allocated (NoahmpIO%WS10M)      ) allocate ( NoahmpIO%WS10M       (XSTART:XEND,YSTART:YEND) ) ! grid-average 10m wind speed
     if ( .not. allocated (NoahmpIO%TRADXY)     ) allocate ( NoahmpIO%TRADXY      (XSTART:XEND,YSTART:YEND) ) ! surface radiative temperature (k)
     if ( .not. allocated (NoahmpIO%NEEXY)      ) allocate ( NoahmpIO%NEEXY       (XSTART:XEND,YSTART:YEND) ) ! net ecosys exchange (g/m2/s CO2)
     if ( .not. allocated (NoahmpIO%GPPXY)      ) allocate ( NoahmpIO%GPPXY       (XSTART:XEND,YSTART:YEND) ) ! gross primary assimilation [g/m2/s C]
@@ -651,6 +654,9 @@ contains
     NoahmpIO%T2MBXY          = undefined_real
     NoahmpIO%Q2MVXY          = undefined_real
     NoahmpIO%Q2MBXY          = undefined_real
+    NoahmpIO%T2M             = undefined_real
+    NoahmpIO%Q2M             = undefined_real
+    NoahmpIO%WS10M           = undefined_real
     NoahmpIO%TRADXY          = undefined_real
     NoahmpIO%NEEXY           = undefined_real
     NoahmpIO%GPPXY           = undefined_real

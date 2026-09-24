@@ -245,6 +245,9 @@ module NoahmpIOVarType
     real(kind=kind_noahmp), allocatable, dimension(:,:)    ::  T2MBXY              ! 2m temperature of bare ground part
     real(kind=kind_noahmp), allocatable, dimension(:,:)    ::  Q2MVXY              ! 2m mixing ratio of vegetation part
     real(kind=kind_noahmp), allocatable, dimension(:,:)    ::  Q2MBXY              ! 2m mixing ratio of bare ground part
+    real(kind=kind_noahmp), allocatable, dimension(:,:)    ::  T2M                 ! grid-average 2m air temperature [K]
+    real(kind=kind_noahmp), allocatable, dimension(:,:)    ::  Q2M                 ! grid-average 2m specific humidity [kg/kg]
+    real(kind=kind_noahmp), allocatable, dimension(:,:)    ::  WS10M               ! grid-average 10m wind speed [m/s]
     real(kind=kind_noahmp), allocatable, dimension(:,:)    ::  TRADXY              ! surface radiative temperature (k)
     real(kind=kind_noahmp), allocatable, dimension(:,:)    ::  NEEXY               ! net ecosys exchange (g/m2/s CO2)
     real(kind=kind_noahmp), allocatable, dimension(:,:)    ::  GPPXY               ! gross primary assimilation [g/m2/s C]
